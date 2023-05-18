@@ -13,8 +13,10 @@ module.exports = {
 };
 
 function getAll() {
+  console.log(skills);
   return skills;
 }
+
  function create(skill) {
   skill.id = Date.now() % 1000000;
   skill.skillLevel = "Beginner";
@@ -28,6 +30,6 @@ function getAll() {
 
  function deleteOne(id) {
   id = parseInt(id);
-  const idx = skills.find(skill => skill.id === id);
+  const idx = skills.findIndex(skill => skill.id === id);
   skills.splice(idx, 1);
  }

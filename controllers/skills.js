@@ -22,7 +22,9 @@ function newSkill(req, res) {
 }
 
 function create(req, res) {
+  console.log(req.body, "this is line 25");
   Skills.create(req.body);
+  console.log(req.body, "this is line 26");
   res.redirect("/skills");
 }
 
