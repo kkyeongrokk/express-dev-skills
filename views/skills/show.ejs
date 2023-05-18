@@ -1,0 +1,5 @@
+<%- include('../partial/header') %>
+<h3><%= skill.skill %></h3>
+<h3>Skill Level: <%= skill.skillLevel %></h3>
+<form action="/skills/<%= skill.id %>?_method=DELETE" method="POST" class="delete-form"><button type="submit">Delete Skill</button></form>
+<%- include('../partial/footer') %>
